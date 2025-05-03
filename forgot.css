@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #071E34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.container {
+    background-color: #ffffff;
+    border: #071E34;
+    border-radius: 8px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+.forgot-password-form h2 {
+    color: #071E34;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+    opacity: 1;
+    font-size: 14px;
+}
+
+.input-container .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #5390d9;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #071E34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.reset-btn:hover {
+    background-color: #4071b0;
+}
+
+.back-btn{
+    color: #071E34;
+}
+.back-btn:hover{
+    color: #4071b0;
+}

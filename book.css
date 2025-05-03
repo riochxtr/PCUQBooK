@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #FFF;
+}
+
+/* NAVBAR DESIGN */
+#nav-bar {
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background: rgb(8, 22, 83, 0.90);
+    position: sticky;
+    z-index: 1000;
+}
+
+.nav-ref {
+    margin-top: 0;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 0.1px solid black;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #144569;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: #CDD5DB;
+    font-family: "Goldman", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+a:hover {
+    color: #1f69a1;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+.user {
+    position: relative;
+    display: inline-block;
+}
+  
+.user-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease-in;
+}
+
+.user-icon:hover{
+    color: #1f69a1;
+}
+  
+.dropdown-menu {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+}
+  
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.dropdown-header {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+  
+.dropdown-menu li {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+  
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+  
+.dropdown-menu li a {
+    color: #144569;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+}
+  
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+    color: #0d2c44;
+}
+
+/* RESPONSIVE NAVBAR */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+    display: block;
+}
+  
+.nav-ref {
+    display: none;
+    flex-direction: column;
+    background-color: #144569;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    z-index: 1000;
+}
+  
+.nav-ref.show-nav {
+    display: flex;
+}
+  
+.nav-ref li {
+    margin: 0.5rem 0;
+}
+
+.user-icon{
+    color: #fff;
+}
+
+}
+
+.book {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(93, 93, 93, 0.449)), url(10.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.booking-container {
+  max-width: 1000px;
+  margin: -70px auto;
+  background-color: #114a75;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #FFF;
+}
+
+.date-select {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  background-color: #f5faff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.date-select div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-right: 1px;
+}
+
+select{
+    width: 200px;
+}
+
+input[type="date"], input[type="time"], select{
+  background-color: #ffffff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-right: 10px;
+}
+
+input[type="date"],input[type="time"],select:hover {
+  border-color: #1a73e8;
+  background-color: #eef4ff;
+}
+
+form{
+    text-align: center;
+}
+
+.custom-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #FFF;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-btn:hover{
+    background-color: #073252;
+    color: #FFF;
+}
+
+.fac-head{
+    text-align: center;
+    margin-top: 100px;
+    color: #114a75;
+}
+
+.facilities {
+    padding: 40px;
+}
+
+.facility-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+.facility-card {
+    background-color: #113e61;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+  
+  
+.facility-card h3 {
+    margin: 10px 0;
+    color: #FFF;
+}
+  
+.facility-card button {
+    background-color: #FFF;
+    color: #113e61;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+  
+.facility-card button:hover {
+    background-color: #073252;
+    color: #FFF;
+}
+
+/* MODAL STYLES */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+.modal-content {
+    color: #494848;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    margin-top: -80px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+.modal-form label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modal-form select,
+.modal-form input[type="date"],
+.modal-form input[type="time"],
+.modal-form input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.modal-form select:focus,
+.modal-form input[type="date"]:focus,
+.modal-form input[type="time"]:focus {
+    border-color: #007BFF;
+}
+
+.date,
+.clock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.date > div,
+.clock > div {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form button[type="submit"] {
+    background-color: #114a75;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modal-form button[type="submit"]:hover {
+    background-color: #FFF;
+    color: #114a75;
+    border: 1px solid #114a75;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+  
+.popover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popover-content {
+    margin-top: 100px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form label {
+    font-weight: bold;
+}
+
+.modal-form input, .modal-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-form button:hover {
+    background-color: #0056b3;
+}
+
+.success-message{
+    margin-top: 70px;
+    background-color:rgb(13, 133, 11);
+    padding: 5px;
+    border: 1px solid rgb(13, 133, 11);
+    text-align: center;
+    position: fixed;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000;
+    opacity: 1;
+    font-size: 1rem;
+    color: white;
+    animation: fadeOut 10s forwards;
+}
+
+.error-message{
+    margin-top: 70px;
+    background-color: #721c24;
+    padding: 5px;
+    border: 1px solid #721c24;
+    text-align: center;
+    position: fixed;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000;
+    opacity: 1;
+    font-size: 1rem;
+    color: white;
+    animation: fadeOut 10s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .facility-list {
+      grid-template-columns: 1fr;
+    }
+  
+    nav {
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+  
+    .logo {
+      font-size: 2rem;
+    }
+  
+    .booking-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .booking-container {
+      margin: -40px 20px;
+    }
+  
+    .facilities {
+      padding: 20px;
+    }
+  
+    .fac-head {
+      font-size: 1.8rem;
+      margin-top: 70px;
+    }
+  
+    .facility-card {
+      padding: 15px;
+    }
+  
+    .facility-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .facility-card button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+}
+  

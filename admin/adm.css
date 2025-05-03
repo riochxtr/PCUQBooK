@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E9ECEE;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #144569;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+.logo{
+    width: 150px;
+    font-size: 40px;
+    margin: 40px 15px;
+    color: #fff;
+    font-family: "Goldman", sans-serif;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    padding: 25px 0 25px 25px;
+}
+
+.out{
+    margin-top: 50px;
+}
+
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #E9ECEE;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+nav ul li a:hover{
+    color: #144569;
+}
+
+nav ul li a:hover:before{
+    width: 95%;
+}
+.wrapper{
+    margin-left: 260px;
+}
+
+.section{
+    min-height: 100vh;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    color: #fff;
+}
+
+.box{
+    background-color: #144569;
+    padding: 50px 100px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 32px 3px #595454;
+}
+
+.total{
+    font-size: 4rem;
+}
+
+/* USER PAGE DESIGN*/
+.popup {
+    margin-left: 495px;
+    background-color: #198754;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: none;
+    width: 200px;
+    text-align: center;
+}
+
+table{
+    margin-top: 40px;
+    margin-left: 70px;
+    border: 1px solid black;
+    width: 90%;
+    border-collapse: collapse;
+    padding: 50px;
+    color: #fff;
+    background-color: #144569;
+}
+
+table th{
+    text-align: center;
+    padding: 20px;
+}
+
+table td{
+    text-align: center;
+    padding: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #E9ECEE;
+    text-align: center;
+    padding: 15px;
+}
+
+button{
+    background-color: red;
+    color: #fff;
+    padding: 3px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(230, 95, 95);
+    color: #fcfcfc;
+}
+
+/* FACILITY DESIGN */
+.btn1 {
+    color: #FFF;
+    background-color: #144569;
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    border: 1px solid black;
+}
+
+.btn1:hover {
+    color: #144569;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+form input[type="text"], select {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn{
+    color: #FFF;
+    background-color: #5283de;
+}
+
+.edit-btn:hover{
+    color: #FFF;
+    background-color: #6481b7;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-align: center;
+}
